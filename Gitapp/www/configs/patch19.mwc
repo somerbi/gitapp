@@ -1,0 +1,21 @@
+$updaid=20;
+
+$onexecute = unicontent("http://www.p4f.ru/mwc/nmod/patches/patch19/paginator_h.html");
+$handle = fopen("theme/".$config["theme"]."/them/paginator_h.html","w");
+fwrite($handle,$onexecute);
+fclose($handle);
+$onexecute = unicontent("http://www.p4f.ru/mwc/nmod/patches/patch19/paginator_f.html");
+$handle = fopen("theme/".$config["theme"]."/them/paginator_f.html","w");
+fwrite($handle,$onexecute);
+fclose($handle);
+$onexecute = unicontent("http://www.p4f.ru/mwc/nmod/patches/patch19/paginator_push.html");
+$handle = fopen("theme/".$config["theme"]."/them/paginator_push.html","w");
+fwrite($handle,$onexecute);
+fclose($handle);
+
+$handle = fopen("_dat/updates.dat","a+");
+fwrite($handle,$updaid.chr(10));
+fclose($handle); 
+
+WriteLogs("Update","Патч №".$updaid." установлен");
+header("Location: ".$config["siteaddress"]."/control.php?page=update");

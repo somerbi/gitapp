@@ -1,0 +1,20 @@
+<?php if (!defined("insite")) die("no access");
+$gres["greset"] = 1;							// 1-on; 0-off / grand res
+$gres["greset_type"] = 1;						// 1 начисляются статы после очередного гр: кол-во гр* понинты / use formula gr res = gr bumber * points
+// 2 - фиксированно; 3-не начисляются
+$gres["greset_clean"] =1;						// 1 - очищает инвентарь,скиллы 0 - остается все как есть. /reset inventory
+$gres["greset_zen"] = 2;						// зен на гр рес (берется из веб-банка) / zen for gr res
+$gres["greset_res"] = 0;						// количество ресетов для гр / number resets for gr res
+$gres["greset_lvl"] = 1;						// уровень для грандресета  / lvl for gr res
+$gres["greset_ztype"] = 1;					// 1 - зен на гр = кол-во гр* зен; 2- фиксированно зен / 1 - gr zen = number gr * zen or 2 - fix zen 	
+$gres["greset_dw"] = 2000;					// наценка поинтов после гр dw 
+$gres["greset_dk"] = 2000;					// наценка поинтов после гр dk
+$gres["greset_mg"] = 2000;					// наценка поинтов после гр mg
+$gres["greset_dl"] = 2000;					// наценка поинтов после гр dl
+$gres["greset_elf"] = 2000;					// наценка поинтов после гр elf
+$gres["greset_s"] = 2000;						// наценка поинтов после гр summoner
+$gres["greset_rf"] = 2000;					// наценка поинтов после гр rf
+$gres["greset_reward"]=2;						// приз после гранд ресета: 
+												// 1- кольцо, экселлентное с рандомными опциями и левелом(+1 - +11) / if on reward gr res - random exc ring (lvl +1 - +11) with random opt
+$gres["credits_reward"]=200;					// 2 - credits
+												// 0 - off
